@@ -16,6 +16,4 @@ export class CarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  
 }
