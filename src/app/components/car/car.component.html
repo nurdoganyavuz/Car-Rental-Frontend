@@ -1,11 +1,28 @@
-<table class="table">
+<div *ngIf="dataLoaded==false" class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<li class="list-group-item" aria-current="true" style="margin-top: 2%; margin-bottom: 1%; text-align: center; background-color:rgb(117,183,152)">Arabalar</li>
+<table *ngIf="dataLoaded==true" class="table">
+  <thead style="text-align: center; background-color:rgb(117,183,152)">
+    <tr>
+      <th>Id</th>
+      <th>Araba</th>
+      <th>Marka</th>
+      <th>Renk</th>
+      <th>Model</th>
+      <th>Fiyat</th>
+      <th>Tanım</th>
+      <th>Görsel</th>
+    </tr>
+  </thead>
     <tr *ngFor= "let car of cars">
       <td>{{car.id}}</td>
-      <td>{{car.brandId}}</td>
-      <td>{{car.colorId}}</td>
       <td>{{car.carName}}</td>
+      <td>{{car.brandName}}</td>
+      <td>{{car.colorName}}</td>
       <td>{{car.modelYear}}</td>
       <td>{{car.dailyPrice}}</td>
       <td>{{car.description}}</td>
+      <td>{{car.imagePath}}</td>
     </tr>
 </table>

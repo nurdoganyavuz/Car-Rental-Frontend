@@ -1,0 +1,17 @@
+<!-- <ul class="list-group">
+  <thead>
+    <tr>
+      <th>Renkler</th>
+    </tr>
+  </thead>
+  <li *ngFor="let color of colors" class="list-group-item">
+    {{ color.colorName }}
+  </li>
+</ul> -->
+<ul class="list-group" style="margin-top: 15%;margin-bottom: 15%;">   
+  <li class="list-group-item" aria-current="true" style="text-align: center;background-color:rgb(117,183,152)">Renkler</li>   
+  <select class="form-select" aria-label="Default select example">
+    <option *ngFor="let color of colors" value="1">{{ color.colorName }}</option>
+  </select>
+</ul>
+

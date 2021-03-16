@@ -1,0 +1,28 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-danger" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <li class="list-group-item" aria-current="true" style="margin-top: 2%; margin-bottom: 1%;text-align: center; background-color:rgb(117,183,152)">Kiralanan Araçlar</li>
+  <table *ngIf="dataLoaded==true" class="table">
+    <thead style="background-color:rgb(117,183,152)"> 
+      <tr>
+        <th>Id</th>
+        <th>Müşter Id</th>
+        <th>Marka</th>
+        <th>Araba</th>
+        <th>Müşteri</th>
+        <th>Şirket</th>
+        <th>Kiralama Tarihi</th>
+        <th>Teslim Tarihi</th>
+      </tr>
+    </thead>
+      <tr *ngFor= "let rental of rentals">
+        <td>{{rental.rentalId}}</td>
+        <td>{{rental.customerId}}</td>
+        <td>{{rental.brandName}}</td>
+        <td>{{rental.carName}}</td>
+        <td>{{rental.customerName}}</td>
+        <td>{{rental.companyName}}</td>
+        <td>{{rental.rentDate}}</td>
+        <td>{{rental.returnDate}}</td>
+      </tr>
+  </table>

@@ -1,7 +1,15 @@
-<ul class="list-group">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-    <li class="list-group-item">A fourth item</li>
-    <li class="list-group-item">And a fifth one</li>
+<!-- <ul class="list-group">
+  <thead>
+    <tr>
+      <th>Markalar</th>
+    </tr>
+  </thead>
+    <li *ngFor="let brand of brands" class="list-group-item">{{brand.brandName}}</li>
+  </ul> -->
+  <ul class="list-group" style="margin-top: 10%;margin-bottom: 10%">   
+      <li class="list-group-item" aria-current="true" style="text-align: center; background-color:rgb(117,183,152)">Markalar</li>   
+      <select class="form-select" aria-label="Default select example">
+        <option *ngFor="let brand of brands" value="1">{{brand.brandName}}</option>
+      </select>
   </ul>
+  
